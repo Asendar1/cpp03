@@ -1,4 +1,4 @@
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++ -Wall -Werror -Wextra -std=c++98
 NAME = claptrap
