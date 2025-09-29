@@ -28,6 +28,19 @@ FragTrap &FragTrap::operator=(const FragTrap &o)
 	return *this;
 }
 
+void FragTrap::attack(const std::string &target)
+{
+	if (this->getEP() <= 0 || this->getHP() <= 0)
+	{
+		std::cout << "FragTrap " << this->getName() << " cannot attack (insufficient energy or hit points)." << std::endl;
+		return;
+	}
+	this->setEP(this->getEP() - 1);
+	std::cout << "FragTrap " << this->getName() << " attacks " << target
+			  << ", causing " << this->getAD() << " points of damage! "
+			  << "(EP left: " << this->getEP() << ")" << std::endl;
+}
+
 void FragTrap::highFivesGuys()
 {
 	std::cout << "FragTrap " << this->getName() << " is requesting a high five!" << std::endl;
